@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+table,table tr th, table tr td { border:1px solid #0094ff; }
+table { width: 100%; min-height: 25px; line-height: 25px; text-align: center; border-collapse: collapse;}   
+</style>
+<body>
+    <a href="./add">新增用户</a>
+    <br/>
+    <br/>
+    <br/>
+    <table class="table">
+        <colgroup >
+           <col width=50>
+           <col width=50>
+           <col width=50>
+           <col width=10>
+        </colgroup>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        {{each data}}
+        <tr>
+            <td>{{$value.name}}</td>
+            <td>{{$value.age}}</td>
+            <td>{{$value.status}}</td>
+            <td>
+                <a href="">编辑</a>
+                <span>删除</span>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+</html>
